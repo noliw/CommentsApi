@@ -4,6 +4,6 @@ import retrofit2.http.GET
 
 
 interface HayleyApiService {
-    @GET("comment")
+    @GET("comments")
     suspend fun getComment(): List<HayleyCommentModel>
 }
