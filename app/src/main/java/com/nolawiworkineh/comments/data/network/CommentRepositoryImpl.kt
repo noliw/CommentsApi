@@ -3,8 +3,9 @@ package com.nolawiworkineh.comments.data.network
 import android.util.Log
 import com.nolawiworkineh.comments.domain.CommentRepository
 import java.util.concurrent.CancellationException
+import javax.inject.Inject
 
-class CommentRepositoryImpl(
+class CommentRepositoryImpl @Inject constructor(
     private val hayleyApi: HayleyApiService
 ) : CommentRepository {
     override suspend fun fetchComments(): List<HayleyCommentModel> {
